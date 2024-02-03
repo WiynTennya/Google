@@ -2,75 +2,148 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google search</title>
+    <title>Google</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
-        body{
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ 
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+ 
+        header {
+            /*background-color: salmon;*/
+            padding: 30px;
+        }
+ 
+        header nav {
+            float: right;
+            /*background-color: aquamarine;*/
+            height: 60px;
+            width: fit-content;
+            line-height: 60px;
+        }
+ 
+        header nav a {
+            font-size: 18pt;
+            text-decoration: none;
+            color: black;
+            margin-left: 30px;
         }
 
-        h1{
-            font-size: 55px;
-            margin-bottom: 10px;
+        header nav div.profile-picture {
+            float: right;
+            width: 60px;
+            height: 60px;
+            border-radius: 30px;
+            background-color: rgb(217, 32, 32);
+            margin-left: 30px;
+            background-image: url("rozak.jpg");
+            background-size: 200px auto;
+            background-repeat: no-repeat;
+            background-position: center center ;
+        }
+ 
+        section.content h1 {
+            font-size: 60px;
             text-align: center;
-            margin-top: 200px;
-            margin-right: 50px;
+            margin-bottom: 10px;
+            margin-top: 100px;
         }
-
-        form {
-           width: 800px;
-           text-align: center;
-           margin: 0px auto;
+ 
+        section.content form {
+            width: 800px;
+            /* background-color: yellowgreen; */
+            text-align: center;
+            margin: 0px auto;
         }
-
-        form div{
+ 
+        section.content form div {
             display: inline-block;
             border: 1px solid black;
-            padding:5px 10px;
+            padding: 5px 10px;
             height: 36px;
             border-radius: 18px;
-            margin-top: 20;
+ 
         }
-
-        form input[type=text]{
+ 
+        section.content form input[type=text] {
             border: none;
             outline: none;
             width: 500px;
         }
-
-        form input[type=submit] {
+ 
+        section.content form input[type=submit] {
             height: 36px;
-            width: 36px ;
+            width: 36px;
             border-radius: 18px;
-            background-color: aquamarine;
+            background-color: magenta;
             border: none;
             cursor: pointer;
-
         }
-    </style>
-    
+ 
+        @media screen and (max-width : 670px){
+            
+            header nav{
+                float: left;
+            }
+            header nav a{
+                margin: 0 5px 0 0;
+                font-size: 12pt;
+            }
+            header nav a.icon {
+                display: none;
+            }
+        }
 
+        section.content form{
+            width: 90%;
+        }
+
+        section.content form input[type=text]{
+            width: 500px;
+        }
+
+        section.content form input[type=submit] {
+            display: none;
+        }
+
+        span.icon-search {
+            display: none;
+        }
+        
+    </style>
 </head>
 <body>
-    <h1><span style="color:aqua;">G</span><span style="color:yellow;">oo</span><span style="color:blue;">gle</span></h1>
-    <form action="https://google.com" target="_blank">
-        <div>
-            <span class="icon-search">🚨</span>
-            <input type="text" name="q" id="target" placeholder="Search here">
-
-        </div>
-        
-        
-
-        <input type="submit" value="🗿">
-    </form>
+    <header>
+        <nav>
+            <a href="#">gmail</a>
+            <a href="#">images</a>
+            <a href="#" class="icon">🎲</a>
+            <a href="#" class="icon">🗿</a>
+            <a href="#" class="profile-picture"></a>
+            <div class="profile-picture"></div>
+        </nav>
+        <div class="profile-picture"></div>
+        <section style="clear: right;"></section>
+    </header>
+    <section class="content">
+        <h1><span style="color: aquamarine;">G</span>oogle</h1>
+        <form action="https://www.google.com/search" target="_blank">
+            <div>
+                <span class="icon-search">🔎</span>
+                <input type="text" name="q" id="" placeholder="Search here">
+            </div>
+ 
+            <input type="submit" value="🩷">
+        </form>
+    </section>
+</body>
+</html>
     
 </body>
 </html>
